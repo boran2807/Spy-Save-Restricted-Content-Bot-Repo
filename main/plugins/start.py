@@ -1,5 +1,5 @@
 import os
-from .. import bot as gagan
+from .. import bot as boran
 from telethon import events, Button
 from telethon.tl.types import InputMediaPhoto
 
@@ -36,10 +36,10 @@ async def sett(event):
         os.rename(path, f'./{event.sender_id}.jpg')
         await t.edit("Temporary thumbnail saved!")
 
-@gagan.on(events.CallbackQuery(pattern=b"rem"))
+@boran.on(events.CallbackQuery(pattern=b"rem"))
 async def remt(event):  
-    gagan = event.client            
-    await event.edit('Trying... to save Bamby ... Wait')
+    boran = event.client            
+    await event.edit('Trying... to save Baby ... Wait')
     try:
         os.remove(f'{event.sender_id}.jpg')
         await event.edit('Removed!')
@@ -52,11 +52,11 @@ async def start_command(event):
     buttons = [
         [Button.inline("SET THUMB", data="set"),
          Button.inline("REM THUMB", data="rem")],
-        [Button.url("Join Channel", url="https://telegram.dog/dev_gagan")]
+        [Button.url("Join Channel", url="https://telegram.dog/mr_boran_empire_bot")]
     ]
 
     # Sending photo with caption and buttons
-    await gagan.send_file(
+    await boran.send_file(
         event.chat_id,
         file=START_PIC,
         caption=TEXT,
