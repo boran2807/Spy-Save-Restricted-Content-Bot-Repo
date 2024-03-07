@@ -1,4 +1,4 @@
-#GitHub: devgaganin
+#GitHub: boranin
 
 import math
 import os
