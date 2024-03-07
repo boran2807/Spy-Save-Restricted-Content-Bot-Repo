@@ -1,4 +1,4 @@
-#Developer @dev_gagan
+#Developer @mr_boran_empire_bot
 
 import sys
 import logging
