@@ -1,4 +1,4 @@
-# Join t.me/dev_gagan
+# Join t.me/mr_boran_empire_bot
 
 import asyncio, time, os
 
@@ -133,7 +133,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 progress=progress_for_pyrogram,
                 progress_args=(
                     client,
-                    "**__Unrestricting__: __[Team SPY](https://t.me/dev_gagan)__**\n ",
+                    "**__Unrestricting__: __[Boran Empire](https://t.me/mr_boran_empire_bot)__**\n ",
                     edit,
                     time.time()
                 )
@@ -174,7 +174,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                     logging.info(e)
                     thumb_path = None
                 
-                caption = f"{msg.caption}\n\n__Unrestricted by **[Team SPY](https://t.me/dev_gagan)**__" if msg.caption else "__Unrestricted by **[Team SPY](https://t.me/dev_gagan)**__"
+                caption = f"{msg.caption}\n\n__Downloaded by **[Boran Empire](https://t.me/mr_boran_empire_bot)**__" if msg.caption else "__Downloaded by **[Boran Empire](https://t.me/mr_boran_empire_bot)**__"
                 await client.send_video(
                     chat_id=sender,
                     video=path,
@@ -187,7 +187,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         client,
-                        '**__Uploading: [Team SPY](https://t.me/dev_gagan)__**\n ',
+                        '**__Uploading: [Boran Empire](https://t.me/mr_boran_empire_bot)__**\n ',
                         upm,
                         time.time()
                     )
@@ -204,7 +204,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                     file = path
 
                 
-                caption = f"{msg.caption}\n\n__Unrestricted by **[Team SPY](https://t.me/dev_gagan)**__" if msg.caption else "__Unrestricted by **[Team SPY](https://t.me/dev_gagan)**__"
+                caption = f"{msg.caption}\n\n__Downloaded by **[Boran Empire](https://t.me/mr_boran_empire_bot)**__" if msg.caption else "__Downloaded by **[Boran Empire](https://t.me/mr_boran_empire_bot)**__"
                 await upm.edit("__Uploading photo...__")
 
                 await bot.send_file(sender, path, caption=caption)
@@ -220,7 +220,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                     file = path
                 thumb_path=thumbnail(sender)
                 
-                caption = f"{msg.caption}\n\n__Unrestricted by **[Team SPY](https://t.me/dev_gagan)**__" if msg.caption else "__Unrestricted by **[Team SPY](https://t.me/dev_gagan)**__"
+                caption = f"{msg.caption}\n\n__Downloded by **[Boran Empire](https://t.me/mr_boran_empire_bot)**__" if msg.caption else "__downloaded by **[Boran Empire](https://t.me/mr_boran_empire_bot)**__"
                 await client.send_document(
                     sender,
                     path, 
@@ -229,7 +229,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         client,
-                        '**__Uploading:__**\n**__Bot made by [Team SPY](https://t.me/dev_gagan)__**',
+                        '**__Uploading:__**\n**__Bot made by [Boran Empire](https://t.me/mr_boran_empire_bot)__**',
                         upm,
                         time.time()
                     )
