@@ -1,10 +1,10 @@
-#Join t.me/dev_gagan
+#Join t.me/mr_boran_empire_bot
 
 import logging
 import time, os, asyncio
 import json
 
-from .. import bot as gagan
+from .. import bot as boran
 from .. import userbot, Bot, AUTH, SUDO_USERS
 
 from main.plugins.pyroplug import check, get_bulk_msg
@@ -31,7 +31,7 @@ ids = []
     await event.client.send_message(event.chat_id, msg) 
 '''
 
-@gagan.on(events.NewMessage(incoming=True, pattern='/batch'))
+@boran.on(events.NewMessage(incoming=True, pattern='/batch'))
 async def _batch(event):
     s = False
     if f'{event.sender_id}' in batch:
@@ -70,7 +70,7 @@ async def _batch(event):
                 return
             batch.append(f'{event.sender_id}')
             cd = await conv.send_message("**Batch process ongoing...**\n\nProcess completed: ", 
-                                    buttons=[[Button.url("Join Channel", url="http://t.me/dev_gagan")]])
+                                    buttons=[[Button.url("Join Channel", url="http://t.me/mr_boran_empire_bot")]])
             co = await run_batch(userbot, Bot, event.sender_id, cd, _link) 
             try: 
                 if co == -2:
@@ -82,7 +82,7 @@ async def _batch(event):
             ids.clear()
             batch.clear()
 
-@gagan.on(events.callbackquery.CallbackQuery(data="cancel"))
+@boran.on(events.callbackquery.CallbackQuery(data="cancel"))
 async def cancel(event):
     ids.clear()
     batch.clear()
@@ -122,7 +122,7 @@ async def run_batch(userbot, client, sender, countdown, link):
             await get_bulk_msg(userbot, client, sender, link, integer)
             protection = await client.send_message(sender, f"Sleeping for `{timer}` seconds to avoid Floodwaits and Protect account!")
             await countdown.edit(count_down, 
-                                 buttons=[[Button.url("Join Channel", url="https://t.me/dev_gagan")]])
+                                 buttons=[[Button.url("Join Channel", url="https://t.me/mr_boran_empire_bot")]])
             await asyncio.sleep(timer)
             await protection.delete()
         except IndexError as ie:
@@ -145,28 +145,28 @@ async def run_batch(userbot, client, sender, countdown, link):
                     #print(e)
                     logger.info(e)
                     if countdown.text != count_down:
-                        await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="http://t.me/dev_gagan")]])
+                        await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="http://t.me/mr_boran_empire_bot")]])
         except Exception as e:
             #print(e)
             logger.info(e)
             await client.send_message(sender, f"An error occurred during cloning, batch will continue.\n\n**Error:** {str(e)}")
             if countdown.text != count_down:
-                await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/dev_gagan")]])
+                await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/mr_boran_empire_bot")]])
         n = i + 1
         if n == len(ids):
             return -2
 
 C = "/cancel"
-START_PIC = "https://graph.org/file/da97ceca70e55983b4891.png"
-TEXT = "👋 Hi, This is 'Paid Restricted Content Saver' bot Made with ❤️ by __**Team SPY**__."
 
-@gagan.on(events.NewMessage(pattern=f"^{C}"))
+TEXT = "👋 Hi, This is 'Paid Restricted Content Saver' bot Made with ❤️ by __**Boran Empire**__."
+
+@boran.on(events.NewMessage(pattern=f"^{C}"))
 async def start_command(event):
     # Creating inline keyboard with buttons
     buttons = [
         [Button.inline("Cancel", data="cancel"),
          Button.inline("Cancel", data="cancel")],
-        [Button.url("Join Channel", url="https://telegram.dog/dev_gagan")]
+        [Button.url("Join Channel", url="https://telegram.dog/mrboranempire")]
     ]
 
     # Sending photo with caption and buttons
@@ -181,7 +181,7 @@ TEXTING = """
 ```
 Execute /batch command only when you 100% sure.
 Bcz /cancel event is removed to make bot work perfectly.
-Thanks - Team SPY
+Thanks - Boran Empire
 
 ```
 """
